@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          principalName="sse_system_user"
+          operation="add"
+          ensure-immediately="{Boolean}true"
+          aces="[type=allow;privileges=jcr:read\;path=/,type=allow;privileges=jcr:readAccessControl\;path=/,type=allow;privileges=jcr:all;path=/content,type=allow;privileges=jcr:all;path=/etc/packages,type=allow;privileges=jcr:all;path=/home/groups,type=allow;privileges=jcr:all;path=/home/users,type=allow;privileges=jcr:all;path=/var/,type=allow;privileges=jcr:all;path=/var/workflow,type=allow;privileges=jcr:all;path=/etc/workflow]"/>

@@ -1,0 +1,41 @@
+<template id="editDialog">
+    <sly data-sly-use.configurationModel="com.exadel.etoolbox.sse.core.models.ConfigurationModel"></sly>
+    <form action="/services/sse/configuration" method="post" id="configuration-form"
+          class="coral-Form coral-Form--vertical foundation-form"
+          data-foundation-form-ajax="true"
+          data-foundation-form-loadingmask="true">
+        <div class="coral-FixedColumn">
+            <div class="coral-FixedColumn-column">
+                <div class="coral-Form-fieldwrapper">
+                    <coral-checkbox name="ERROR" value="ERROR" data-sly-attribute.checked="${configurationModel.error}">
+                        Error
+                    </coral-checkbox>
+                </div>
+                <div class="coral-Form-fieldwrapper">
+                    <coral-checkbox name="WARN" value="WARN" data-sly-attribute.checked="${configurationModel.warn}">
+                        Warn
+                    </coral-checkbox>
+                </div>
+                <div class="coral-Form-fieldwrapper">
+                    <coral-checkbox name="INFO" value="INFO" data-sly-attribute.checked="${configurationModel.info}">
+                        Info
+                    </coral-checkbox>
+                </div>
+                <div class="coral-Form-fieldwrapper">
+                    <coral-checkbox name="DEBUG" value="DEBUG" data-sly-attribute.checked="${configurationModel.debug}">
+                        Debug
+                    </coral-checkbox>
+                </div>
+                <div class="coral-Form-fieldwrapper">
+                    <coral-checkbox name="TRACE" value="TRACE" data-sly-attribute.checked="${configurationModel.trace}">
+                        Trace
+                    </coral-checkbox>
+                </div>
+                <coral-buttongroup name="button-group">
+                    <button type="submit" autocomplete="off" is="coral-button" coral-close="" variant="primary">Save</button>
+                    <button is="coral-button" type="button" variant="warning" coral-close="">Cancel</button>
+                </coral-buttongroup>
+            </div>
+        </div>
+    </form>
+</template>
